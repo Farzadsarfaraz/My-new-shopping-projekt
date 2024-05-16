@@ -55,5 +55,6 @@ if (document.readyState == "loading"){
     if(isNaN(input.value) || input.value <= 0){
         input.value = 1;
     }
+    updatetotal();
 
  }
