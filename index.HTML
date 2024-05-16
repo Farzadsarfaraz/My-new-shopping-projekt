@@ -12,10 +12,31 @@
   </head>
   <body>
     <header>
-      <nav class="nav container">
+      <div class="nav container">
         <a href="#" class="logo"> Home </a>
         <i class="bx bxs-shopping-bag" id="cart__icon"></i>
-      </nav>
+        <div class="cart">
+            <h1 class="car-title"> Your Order</h1>
+            <div class="cart-content">
+                <div class="cart-box">
+                    <img src="pic1.webp" alt="" class="cart-img" width="100px">
+                    <div class="detail-box">
+                        <div class="cart-product-title"> long Dress</div>
+                        <div class="cart-price">50$</div>
+                        <input type="number" value class="cart-quantity">
+                    </div>
+                    <i class='bx bxs-trash-alt'></i>
+                </div>
+                <div class="totla">
+                <div class="total-title"> Total</div>
+                <div class="total-price"> 0$</div>
+            </div>
+            <button class="btn-buy"> Buy now</button>
+            <i class='bx bx-x' id="clos-cart"></i>
+                
+            </div>
+        </div>
+      </div>
     </header>
     <section class="shop container">
       <h2 class="section-title">Shop Products</h2>
@@ -148,5 +169,7 @@
         </div>
       </div>
     </section>
+
+    <script src="NEW.JS"></script>
   </body>
 </html>

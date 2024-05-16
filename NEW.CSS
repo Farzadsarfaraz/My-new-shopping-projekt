@@ -18,7 +18,7 @@
     text-decoration: none;
 }
 body{
-    background-color: rgb(206, 188, 188);
+    background-color: var(--bg-color);
 }
 header{
     position: fixed;
@@ -26,7 +26,8 @@ header{
     left: 0;
     width: 100%;
     background: var(--bg-color);
-    box-shadow: 0 1px 4px hsl(0, 4%, 15% / 10%);
+    box-shadow:  -2px 0 4px hsl(0 4% 15% / 10%);
+    z-index: 99;
 }
 .nav{
     display: flex;
@@ -38,6 +39,16 @@ header{
     font-size: 1.1 rem;
     color: var(--text-color);
     font-weight: 400;
+}
+.cart{
+    position: fixed;
+    right: 0;
+    top: 0;
+    width: 360px;
+    min-height: 100vh;
+    background-color: #fff;
+    box-shadow: -2px 0 4px hsl(0 4% 15% / 10%);
+
 }
 #cart__icon{
     font-size: 1.8rem;
@@ -59,4 +70,12 @@ section{
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(270px, auto));
     gap: 1.5rem;
+}
+.product-box img{
+    transition: .4s;
+    height: 400px;
+}
+.product-box img:hover{
+    transform: scale(1.1);
+    border-radius: 30px;
 }
