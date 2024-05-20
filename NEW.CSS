@@ -44,11 +44,12 @@ header{
     position: fixed;
     right: -100%;
     top: 0;
-    width: 360px;
+    width: 260px;
     min-height: 100vh;
     background-color: #fff;
     box-shadow: -2px 0 4px hsl(0 4% 15% / 10%);
     transition: 1s;
+    overflow-y: scroll;
 }
 .cart.active{
     right: 0;
@@ -58,7 +59,7 @@ header{
     cursor: pointer;
 }
 section{
-    padding: 4rem 1rem 3rem;
+    padding: 4rem 1.5rem 3rem;
 }
 .section-title{
     font-size: 1.5rem;
@@ -79,6 +80,39 @@ section{
     height: 400px;
 }
 .product-box img:hover{
-    transform: scale(1.1);
+    padding: 5px;
     border-radius: 30px;
+}
+#clos-cart{
+    font-size: 1.5rem;
+    position: absolute;
+    left: 10px;
+    top: 10px;
+    background-color: rgb(180, 180, 167);
+    border-radius: 10px;
+    cursor: pointer;
+    transition: .7s;
+}
+#clos-cart:hover{
+    background-color: black;
+    color: #fff;
+}
+
+.car-title{
+    margin-top: 40px;
+    text-align: center;
+}
+.totla{
+    text-align: center;
+    padding: 20px;
+}
+.btn-buy{
+    max-width: 400px;
+    margin-left: 40%;
+    padding: 10px;
+    cursor: pointer;
+}
+.add-cart{
+    font-size: 1.5rem;
+    cursor: pointer;
 }
