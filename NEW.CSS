@@ -42,14 +42,14 @@ header{
 }
 .cart{
     position: fixed;
+    height: 100%;
     right: -100%;
     top: 0;
     width: 260px;
-    min-height: 100vh;
     background-color: #fff;
     box-shadow: -2px 0 4px hsl(0 4% 15% / 10%);
     transition: 1s;
-    overflow-y: scroll;
+    overflow: scroll;
 }
 .cart.active{
     right: 0;
@@ -59,7 +59,7 @@ header{
     cursor: pointer;
 }
 section{
-    padding: 4rem 1.5rem 3rem;
+    padding: 4rem 1rem 3rem;
 }
 .section-title{
     font-size: 1.5rem;
@@ -72,12 +72,12 @@ section{
 }
 .shop-content{
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(270px, auto));
+    grid-template-columns: repeat(auto-fit, minmax(220px, auto));
     gap: 1.5rem;
 }
 .product-box img{
     transition: .4s;
-    height: 400px;
+    height: 300px;
 }
 .product-box img:hover{
     padding: 5px;
@@ -114,5 +114,4 @@ section{
 }
 .add-cart{
     font-size: 1.5rem;
-    cursor: pointer;
 }
