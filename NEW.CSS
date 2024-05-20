@@ -58,6 +58,36 @@ header{
     font-size: 1.8rem;
     cursor: pointer;
 }
+#bodyDocument{
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    flex-wrap: wrap;
+}
+#bodyDocument h1{
+    font-size: 2rem;
+}
+#bodyDocument span{
+    color: rgb(127, 100, 60);
+}
+.scroll__down{
+    position: absolute;
+    bottom: 50px;
+    left: 45%;
+}
+.bodyContent{
+    width: 40%;
+
+}
+.bodyImg{
+    background-image: url(pic12.png);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    height: 500px;
+    width: 350px;
+
+}
 section{
     padding: 4rem 1rem 3rem;
 }
@@ -75,13 +105,17 @@ section{
     grid-template-columns: repeat(auto-fit, minmax(220px, auto));
     gap: 1.5rem;
 }
+.product-box{
+    position: relative;
+}
 .product-box img{
     transition: .4s;
     height: 300px;
+    overflow: hidden;
 }
 .product-box img:hover{
-    padding: 5px;
-    border-radius: 30px;
+     padding: 3px;
+     border-radius: 30px;
 }
 #clos-cart{
     font-size: 1.5rem;
@@ -113,5 +147,8 @@ section{
     cursor: pointer;
 }
 .add-cart{
+    position: absolute;
     font-size: 1.5rem;
+    right: 3rem;
+    cursor: pointer;
 }
