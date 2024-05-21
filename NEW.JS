@@ -1,6 +1,16 @@
 const cartIcon = document.getElementById("cart__icon");
 const cart = document.querySelector(".cart");
 const closeCart = document.getElementById("clos-cart");
+let Navbar = document.querySelector(".header");
+
+
+window.addEventListener('scroll', () => {
+  if(document.body.scrollTop > 40 || document.documentElement.scrollTop > 40){
+    Navbar.classList.add("active1");
+  }else{
+    Navbar.classList.remove("active1");
+  }
+});
 
 cartIcon.addEventListener("click", function () {
   cart.classList.add("active");
@@ -17,10 +27,9 @@ if (document.readyState == "loading") {
 
 function ready() {
   let removeCartButtons = document.getElementsByClassName("cart-remove");
-  for (let i = 0; i < removeCartButtons.length; i++) {
-    let button = removeCartButtons[i];
+  for (let button of removeCartButtons) {
     button.addEventListener("click", removeCartItem);
-  }
+  };
   
   let quantityInputs = document.getElementsByClassName("cart-quantity");
   for (let i = 0; i < quantityInputs.length; i++) {
@@ -40,11 +49,12 @@ function ready() {
 
 function buyButtonClicked() {
   alert("Your order is now placed");
-  var cartContent = document.getElementsByClassName("cart-content")[0];
+  let cartContent = document.getElementsByClassName("cart-content")[0];
   while (cartContent.hasChildNodes()) {
     cartContent.removeChild(cartContent.firstChild);
   }
   updatetotal();
+  cart.classList.remove("active");
 }
 
 function removeCartItem(event) {
