@@ -121,7 +121,6 @@ function addProductToCart(title, price, productImg) {
       return;
     }
   }
-
   let cartBoxContent = `
     <img src="${productImg}" alt="" class="cart-img" width="100px">
     <div class="detail-box">
